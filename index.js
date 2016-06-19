@@ -88,7 +88,15 @@ class Dropdown extends Component {
     let { options, baseClassName } = this.props
     let ops = options.map((option) => {
       if (option.type === 'group') {
-        let groupTitle = (<div className={`${baseClassName}-title`}>{option.name}</div>)
+        let value = option.value || option.name || option.label || option
+        let label = option.label || option.name || option.value || option
+
+        let groupTitle = (<div
+                            className={`${baseClassName}-title`}
+                            onMouseDown={this.setValue.bind(this, value, label)}
+                            onClick={this.setValue.bind(this, value, label)}>
+                              {option.name}
+                          </div>)
         let _options = option.items.map((item) => this.renderOption(item))
 
         return (
