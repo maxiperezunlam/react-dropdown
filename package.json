@@ -6,7 +6,7 @@
   "style": "style.css",
   "repository": {
     "type": "git",
-    "url": "git://github.com/fraserxu/react-dropdown.git"
+    "url": "git://github.com/maxiperezunlam/react-dropdown.git"
   },
   "files": [
     "dist/index.js"
@@ -25,9 +25,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fraserxu/react-dropdown/issues"
+    "url": "https://github.com/maxiperezunlam/react-dropdown/issues"
   },
-  "homepage": "https://github.com/fraserxu/react-dropdown",
+  "homepage": "https://github.com/maxiperezunlam/react-dropdown",
   "dependencies": {
     "classnames": "^2.2.3"
   },

@@ -133,18 +133,27 @@ var Dropdown = function (_Component) {
 
       var ops = options.map(function (option) {
         if (option.type === 'group') {
+          //Modified
+          var gvalue = option.value || option.label || option.name || option;
+          var glabel = option.label || option.name || option.value || option;
           var groupTitle = _react2.default.createElement(
             'div',
-            { className: baseClassName + '-title' },
+            { className: baseClassName + '-title',
+              onClick: _this2.setValue.bind(_this2, gvalue, glabel),
+              onMouseDown: _this2.setValue.bind(_this2, gvalue, glabel)
+            },
             option.name
           );
           var _options = option.items.map(function (item) {
             return _this2.renderOption(item);
           });
 
+
           return _react2.default.createElement(
             'div',
-            { className: baseClassName + '-group', key: option.name },
+            { className: baseClassName + '-group',
+              key: option.name,
+            },
             groupTitle,
             _options
           );
